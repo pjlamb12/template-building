@@ -3,25 +3,19 @@ require('../scss/index.scss');
 function openMainNav(nav, linksContainer) {
 	if (!nav || !linksContainer) return;
 
-	linksContainer.classList.remove('off-screen');
+	linksContainer.classList.remove('navbar__links-container--off-screen');
 	
-	nav.classList.toggle('main-nav-open');
+	nav.classList.toggle('navbar--main-nav-open');
 	const body = document.getElementsByTagName('body')[0];
-	body.classList.toggle('main-nav-open');
-	if (!nav.classList.contains('main-nav-open')) {
+	body.classList.toggle('navbar--main-nav-open');
+	if (!nav.classList.contains('navbar--main-nav-open')) {
 		setTimeout(() => {
-			linksContainer.classList.add('off-screen');
+			linksContainer.classList.add('navbar__links-container--off-screen');
 		}, 700);
 	}
 }
 
 const mainNav = document.getElementById('main-nav');
-const linksContainer = document.getElementById('links-container');
-mainNav.addEventListener('click', () => openMainNav(mainNav, linksContainer));
-
-window.onresize = () => {
-	const width = window.outerWidth;
-	if (width > 768) {
-		document.getElementById('links-container').style.display = '';
-	}
-};
+const mainNavLinksContainer = mainNav.getElementsByClassName('navbar__links-container')[0];
+const mainNavToggle = mainNav.getElementsByClassName('navbar__menu-toggle')[0];
+mainNavToggle.addEventListener('click', () => openMainNav(mainNav, mainNavLinksContainer));
