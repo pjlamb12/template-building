@@ -76,6 +76,14 @@
 	display: block;
 }
 
+.navbar__links-container__links {
+	list-style-type: none;
+}
+
+.navbar__links-container__links__link-item {
+	display: inline;
+}
+
 .navbar__menu-toggle{
 	display: block;
 
@@ -96,7 +104,11 @@
 
 	.navbar__links-container__links {
 		display: block;
-		
+	}
+
+	.navbar__links-container__links__link-item {
+		display: block;
+
 		a {
 			display: block;
 			width: 100%;
