@@ -1,4 +1,5 @@
 .navbar--main-nav-open {
+	height: 100vh;
 	overflow-y: hidden;
 }
 
@@ -8,6 +9,7 @@
 	align-items: center;
 	min-height: 70px;
 	flex-wrap: wrap;
+	position: relative;
 
 	& > div {
 		padding: 10px 25px;
@@ -94,9 +96,22 @@
 }
 
 @media screen and (max-width: $tabletp) {
+	.navbar--main-nav-open {
+		.navbar:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 70px;
+			height: 100vh;
+			width: 100%;
+			background-color: #fff;
+		}
+	}
+	
 	.navbar {
 		display: block;
 	}
+
 	.navbar__logo-container {
 		display: block;
 		width: 100%;
@@ -126,15 +141,18 @@
 		position: absolute;
 		animation: navClose .7s ease;
 		transform: translateX(100%);
+		overflow-y: scroll;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		top: 70px;
 	}
+
 	.navbar__logo-container {
 		position: absolute;
 		top: 18px;
 		left: 0;
 	}
+
 	.navbar--main-nav-open {
 		& > .navbar__links-container {
 			animation: navOpen .7s ease;
@@ -143,6 +161,7 @@
 			transform: translateX(0);
 		}
 	}
+
 	.navbar__links-container--off-screen {
 		display: none;
 	}
