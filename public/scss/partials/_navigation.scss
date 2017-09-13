@@ -1,6 +1,5 @@
 .navbar--main-nav-open {
 	height: 100vh;
-	overflow-y: hidden;
 }
 
 .navbar {
@@ -96,7 +95,7 @@
 }
 
 @media screen and (max-width: $tabletp) {
-	.navbar--main-nav-open {
+	.navbar--transitioning {
 		.navbar:before {
 			content: '';
 			display: block;
@@ -106,6 +105,10 @@
 			width: 100%;
 			background-color: #fff;
 		}
+	}
+
+	.navbar--hide-overflow {
+		overflow-y: hidden;
 	}
 	
 	.navbar {
