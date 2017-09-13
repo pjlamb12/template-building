@@ -1,4 +1,4 @@
-.navbar--main-nav-open {
+.navbar--nav-open {
 	height: 100vh;
 }
 
@@ -35,7 +35,7 @@
 	}
 }
 
-.navbar__menu-toggle{
+.navbar__menu-toggle {
 	display: none;
 	width: 75px;
 	position: absolute;
@@ -55,7 +55,7 @@
 .navbar--dark {
 	background-color: $black;
 	color: $white;
-	
+
 	a {
 		color: $white;
 	}
@@ -64,7 +64,7 @@
 		background-color: $black;
 	}
 
-	.navbar__menu-toggle{
+	.navbar__menu-toggle {
 		span {
 			background-color: $white;
 		}
@@ -73,7 +73,7 @@
 
 .navbar__links-container {
 	flex-grow: 1;
-	transition: transform .7s ease;
+	transition: transform 0.7s ease;
 	display: block;
 }
 
@@ -85,7 +85,7 @@
 	display: inline;
 }
 
-.navbar__menu-toggle{
+.navbar__menu-toggle {
 	display: none;
 
 	span {
@@ -110,7 +110,7 @@
 	.navbar--hide-overflow {
 		overflow-y: hidden;
 	}
-	
+
 	.navbar {
 		display: block;
 	}
@@ -135,14 +135,14 @@
 		}
 	}
 
-	.navbar__menu-toggle{
+	.navbar__menu-toggle {
 		display: block;
 	}
 
 	.navbar__links-container {
 		display: block;
 		position: absolute;
-		animation: navClose .7s ease;
+		animation: navClose 0.7s ease;
 		transform: translateX(100%);
 		overflow-y: scroll;
 		width: 100%;
@@ -156,9 +156,9 @@
 		left: 0;
 	}
 
-	.navbar--main-nav-open {
+	.navbar--nav-open {
 		& > .navbar__links-container {
-			animation: navOpen .7s ease;
+			animation: navOpen 0.7s ease;
 			display: block;
 			overflow-y: scroll;
 			transform: translateX(0);
