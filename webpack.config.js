@@ -37,10 +37,6 @@ const config = {
 		main: './public/javascript/index.js',
 	},
 	devtool: 'source-map',
-	devServer: {
-		contentBase: './',
-		hot: true,
-	},
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
