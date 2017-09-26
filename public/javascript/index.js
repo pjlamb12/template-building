@@ -4,10 +4,13 @@ import { $, $$ } from './modules/bling';
 import openNav from './modules/navigation';
 
 const mainNav = document.getElementById('main-nav');
-const mainNavToggle = mainNav.getElementsByClassName('navbar__menu-toggle')[0];
-
-const navbarToggles = $$('.navbar__menu-toggle');
-navbarToggles.on('click', function() {
-	openNav(this.parentElement);
+const mainNavSlidenav = document.getElementById('main-nav-slidenav');
+window.on('load', function() {
+	setTimeout(function() {
+		mainNavSlidenav.classList.remove('slidenav--off-screen');
+	}, 750);
 });
-// mainNavToggle.addEventListener('click', () => openNav(mainNav));
+const mainNavToggle = mainNav.getElementsByClassName('navbar__menu-toggle')[0];
+mainNav.on('click', function() {
+	openNav(this);
+});
