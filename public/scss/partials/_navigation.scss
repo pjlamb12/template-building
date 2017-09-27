@@ -32,13 +32,32 @@
 	position: absolute;
 	top: 18px;
 	right: 0;
+	cursor: pointer;
 
 	span {
+		display: block;
+		height: 2px;
 		background-color: $navbarDarkBackground;
 		margin-top: 4px;
+		transform-origin: 16% 50% 0;
+		transition: all 0.4s ease;
 
 		&:first-child {
 			margin-top: 0;
+		}
+	}
+}
+
+.navbar--nav-open {
+	.navbar__menu-toggle {
+		.bar-1 {
+			transform: rotate(45deg);
+		}
+		.bar-2 {
+			opacity: 0;
+		}
+		.bar-3 {
+			transform: rotate(-45deg);
 		}
 	}
 }
@@ -75,16 +94,6 @@
 		&:first-child {
 			margin: 0;
 		}
-	}
-}
-
-.navbar__menu-toggle {
-	display: none;
-	cursor: pointer;
-
-	span {
-		display: block;
-		height: 2px;
 	}
 }
 
