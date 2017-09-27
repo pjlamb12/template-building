@@ -5,6 +5,8 @@
 	min-height: 70px;
 	flex-wrap: wrap;
 	position: relative;
+	border-bottom: 1px solid $navbarDarkBackground;
+	background-color: $navbarBackground;
 
 	& > div {
 		padding: 10px 25px;
@@ -21,14 +23,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-
-	a {
-		margin-left: 25px;
-
-		&:first-child {
-			margin: 0;
-		}
-	}
+	list-style-type: none;
 }
 
 .navbar__menu-toggle {
@@ -39,7 +34,7 @@
 	right: 0;
 
 	span {
-		background-color: $black;
+		background-color: $navbarDarkBackground;
 		margin-top: 4px;
 
 		&:first-child {
@@ -49,15 +44,11 @@
 }
 
 .navbar--dark {
-	background-color: $black;
+	background-color: $navbarDarkBackground;
 	color: $white;
 
 	a {
 		color: $white;
-	}
-
-	.navbar__links-container {
-		background-color: $black;
 	}
 
 	.navbar__menu-toggle {
@@ -73,13 +64,18 @@
 	display: block;
 }
 
-.navbar__links-container__links {
-	list-style-type: none;
-}
-
 .navbar__links-container__links__link-item {
 	display: inline-block;
 	padding: 10px 20px;
+
+	a {
+		color: $linkColor;
+		margin-left: 25px;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
 }
 
 .navbar__menu-toggle {
@@ -100,26 +96,11 @@
 	top: 70px;
 	left: 100%;
 	animation: navClose 0.7s ease;
+	background-color: $slidenavBackground;
 
 	&.slidenav--off-screen {
 		visibility: hidden !important;
 	}
-	&.slidenav--dark {
-		background-color: $black;
-
-		.slidenav__links__link {
-			border-color: $white;
-		}
-		a {
-			color: $white;
-
-			&:hover {
-				background-color: $white;
-				color: $black;
-			}
-		}
-	}
-
 	&.slidenav--open {
 		animation: navOpen 0.7s ease;
 		left: 0;
@@ -136,22 +117,22 @@
 	display: block;
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid $black;
+	border-bottom: 1px solid $slidenavLink;
 
 	&:first-child {
-		border-top: 1px solid $black;
+		border-top: 1px solid $slidenavBackground;
 	}
 
 	a {
 		display: block;
 		width: 100%;
 		padding: 25px;
-		color: $black;
+		color: $slidenavLink;
 		transition: all 0.3s ease;
 
 		&:hover {
-			background-color: $black;
-			color: $white;
+			background-color: $slidenavLink;
+			color: $slidenavBackground;
 		}
 	}
 }
