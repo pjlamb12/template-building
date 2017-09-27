@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="./dist/style.css">
 </head>
+
 <body>
-	<nav id="main-nav" class="navbar navbar--dark">
+	<nav id="main-nav" class="navbar">
 		<div class="navbar__logo-container">
 			<p>Logo</p>
 		</div>
 		<div class="navbar__menu-toggle">
-			<span></span>
-			<span></span>
-			<span></span>
+			<span class="bar-1"></span>
+			<span class="bar-2"></span>
+			<span class="bar-3"></span>
 		</div>
-		<div class="navbar__links-container navbar__links-container--off-screen">
+		<div class="navbar__links-container">
 			<ul class="navbar__links-container__links">
 				<li class="navbar__links-container__links__link-item">
 					<a href="#">Link 1</a>
@@ -40,8 +41,29 @@
 			</ul>
 		</div>
 	</nav>
+	<nav id="main-nav-slidenav" class="slidenav slidenav--off-screen slidenav--dark">
+		<ul class="slidenav__links">
+			<li class="slidenav__links__link">
+				<a href="#">Link 1</a>
+			</li>
+			<li class="slidenav__links__link">
+				<a href="#">Link 2</a>
+			</li>
+			<li class="slidenav__links__link">
+				<a href="#">Link 3</a>
+			</li>
+			<li class="slidenav__links__link">
+				<a href="#">Link 4</a>
+			</li>
+			<li class="slidenav__links__link">
+				<a href="#">Link 5</a>
+			</li>
+			<li class="slidenav__links__link">
+				<a href="#">Link 6</a>
+			</li>
+		</ul>
+	</nav>
 
-
-	<script src="./dist/main.bundle.js"></script>
 </body>
+
 </html>
