@@ -1,0 +1,36 @@
+.card {
+	max-width: 350px;
+	border: 1px solid $black;
+	border-radius: 3px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}
+.card__card-image_container {
+	border-bottom: 1px solid $black;
+}
+.card__card-body {
+	padding: 15px;
+}
+.card__card-title {
+	font-size: 1.3rem;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $black;
+}
+.card__card-text {
+	margin-bottom: 0;
+
+	&.card__card-text--justified {
+		text-align: justify;
+	}
+}
+.card__card-footer {
+	padding: 15px;
+	border-top: 1px solid $black;
+}
