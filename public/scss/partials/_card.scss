@@ -2,14 +2,15 @@
 	max-width: 350px;
 	border: 1px solid $black;
 	border-radius: 3px;
-
-	img {
-		display: block;
-		margin: 0 auto;
-		max-width: 100%;
-	}
 }
-.card__card-image_container {
+.card__card-image {
+	display: block;
+	margin: 0 auto;
+	max-height: 150px;
+	width: auto;
+	max-width: 100%;
+}
+.card__card-image-container {
 	border-bottom: 1px solid $black;
 }
 .card__card-body {
