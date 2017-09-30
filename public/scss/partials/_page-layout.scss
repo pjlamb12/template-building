@@ -1,0 +1,11 @@
+$containerMaxWidth: 1250px;
+
+.container {
+	width: calc(100% * 0.9);
+	max-width: $containerMaxWidth;
+	margin: auto;
+}
+
+.container__full-width {
+	width: 100%;
+}
